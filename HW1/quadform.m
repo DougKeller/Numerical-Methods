@@ -1,11 +1,13 @@
 function [xp, xm] = quadform(a, b, c)
-    discriminant = b * b - 4 * a * c;
+    discriminant = b.^2 - 4 .* a .* c;
     
     if (b < 0)
-        xp = b * -1 + sqrt(discriminant);
-        xm = c / (2 * xp);
+        numerator = b * -1 + sqrt(discriminant);
+        xp = numerator ./ 2 .* a;
+        xm = c ./ a ./ xp
     else
-        xm = b * -1 - sqrt(discriminant);
-        xp = c / (2 * xm);
+        numerator = b * -1 - sqrt(discriminant);
+        xm = numerator ./ 2 .* a;
+        xp = c ./ a ./ xm
     end
 end
