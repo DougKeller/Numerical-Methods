@@ -4,10 +4,10 @@ function [xp, xm] = quadform(a, b, c)
     if (b < 0)
         numerator = b * -1 + sqrt(discriminant);
         xp = numerator ./ 2 .* a;
-        xm = c ./ a ./ xp
+        xm = c ./ a ./ xp;
     else
         numerator = b * -1 - sqrt(discriminant);
         xm = numerator ./ 2 .* a;
-        xp = c ./ a ./ xm
+        xp = c ./ a ./ xm;
     end
 end
