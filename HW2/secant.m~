@@ -1,0 +1,11 @@
+function [c, k] = secant(f, x0, x1, tol, maxit)
+    xn = x1;
+    xnm = x0;
+    
+    for k=1:maxit
+       xnp = xk - f(n) * (xn - xnm) / (f(xn) - f(xn - 1));
+       
+    end
+
+end
+
