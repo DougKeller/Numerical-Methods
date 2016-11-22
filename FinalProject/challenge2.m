@@ -22,7 +22,7 @@ subplot(1, 2, 1);
 plot(rawX, rawY, 'o', x, y, '-', x, radius, '-.k', c(1), c(2), 'x');
 title('Phantom Measurements - bhat');
 centerLabel = sprintf('(%3.3f,%.3f)', c(1), c(2));
-legend('Raw Data', 'bhat', 'Location', 'southeast');
+legend('Raw Data', 'bhat', 'rbar', 'Location', 'southeast');
 text(c(1), c(2), strcat('  \leftarrow', centerLabel));
 
 % Plot polar coordinates
@@ -30,4 +30,4 @@ subplot(1, 2, 2);
 plot(rawTheta, rawRho, 'o', theta, rho, '-', theta, rhobar, '-.k', [0, 7], [0, 0], '-k');
 title('Phantom Measurements - dhat');
 xlabel('Theta'),ylabel('Radius');
-legend('Raw Data', 'dhat', 'Location', 'southeast');
+legend('Raw Data', 'dhat', 'rhobar', 'Location', 'southeast');
